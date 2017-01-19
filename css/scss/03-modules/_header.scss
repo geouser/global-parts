@@ -1,24 +1,86 @@
-         
-.mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
-    @include transition(all, .4s);
-    
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
+.main-header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+    position: relative;
+
+    @media (min-width: 1200px) {
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+    }
+
+    @media (min-width: 1200px) and (max-height: 800px) {
+        padding: 10px 0;
+    }
+
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+
+    .site-logo {
+        width: 150px;
+
+        @media (min-width: 1200px) and (max-height: 700px) {
+            width: 100px;
         }
-        /*.............end media..............*/
-}
+
+        a,
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
 
 
-/* ------------------------------------ */
-/*  NAV STYLES  */
-.mainNav {
-            /*.................media.............*/
-            @include m800 { 
+    .main-menu {
+        width: -webkit-calc(100% - 150px);
+        width: calc(100% - 150px);
+        padding-left: 20px;
+        text-align: right;
+
+        .menu-item {
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 26px;
+            font-size: 24px;
+
+            a {
+                color: $light-grey;
+                display: block;
+                font-family: $rm;
             }
-            /*.............end media.............*/
+        }
+    }
+
+
+    @media (min-width: 1200px) and (max-width: 1550px) {
+        .wrapper {
+            padding: 0 100px;
+            position: relative;
+        }
+
+        .main-menu .menu-item {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+    }
 }
+
+
+/* transparent background for first section*/
+@media (min-width: 1200px) {
+    .fp-viewing-section-1 .main-header {
+        background-color: transparent;
+    }    
+}
+
 
 
 
@@ -26,8 +88,8 @@
 /* ------------------------------------ */
 /*  MENU BUTTON  */
 
+.side-menu-button,
 .menu-button     {    
-    display: none;
     width: 50px;
     height: 50px;
     @include position(fixed, 15px, 15px, auto, auto);
@@ -58,10 +120,52 @@
     &.active .bottom_line  {   @include transform(rotate(-45deg)); bottom: 45%;}
     &.active .middle_line  {   width: 0; left: 50%;}
 
-        /*.................media.............*/
-        @include m800 {
-            display: block;
-        }
-        /*..............end media.............*/
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
 
+
+.side-menu-button {
+    display: block;
+    position: absolute;
+    left: 100px;
+    right: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: transparent;
+    font-size: 25px;
+    color: $blue;
+
+    .fa-times {
+        display: none;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1550px) {
+        left: 25px;
+    }
+}
+
+.search-button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    color: $blue;
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+
+    @media (min-width: 1200px) and (max-width: 1550px) {
+        right: 25px;
+    }
 }

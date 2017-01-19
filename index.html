@@ -16,6 +16,8 @@
         <meta name="google-site-verification" content="">
         <!--<link rel="shortcut icon" href="images/favicon.ico">-->
         
+        <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/general.css">
     </head>
     <body>
@@ -24,30 +26,30 @@
        
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
-        <header class="mainHeader">
+        <header class="main-header fixed">
             <div class="wrapper">
-
-                <nav class="mainNav"><!-- start navigation -->
-                    <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Practive</a></li>
-                        <li><a href="#">Lawyers</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav><!-- end nav -->
-
-                <div class="mainHeader__info">
-                    <div class="social">
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
+                <button class="side-menu-button">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button><!-- end toggle mobile menu -->
+                <div class="flex-container">
+                    <div class="site-logo">
+                        <a href="#"><img src="images/site-logo.png" alt=""></a>
                     </div>
-                    <a href="tel:+971 55 915 94 49" class="tel">+971 55 915 94 49</a>
-                    <a href="mailto:hello@law.com" class="mail">hello@law.com</a>
-                </div><!-- end mainHeader__info -->
-
+                    <nav class="main-menu"><!-- start navigation -->
+                        <ul>
+                            <li class="menu-item"><a href="#" class="active">Home</a></li>
+                            <li class="menu-item"><a href="#">About</a></li>
+                            <li class="menu-item"><a href="#">Product</a></li>
+                            <li class="menu-item"><a href="#">Amsoil</a></li>
+                            <li class="menu-item"><a href="#">Accreditations</a></li>
+                            <li class="menu-item"><a href="#">Media</a></li>
+                            <li class="menu-item"><a href="#">Partners</a></li>
+                            <li class="menu-item"><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav><!-- end main-menu -->
+                </div> <!-- end .flex-container -->
+                <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div><!-- end wrapper -->
         </header><!-- end header -->
         
@@ -60,15 +62,52 @@
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
-        <section class="offer">
-            <div class="offer__info wrapper"><!-- start offerInfo -->
-                <h1>Free advice from our</h1>
-                <button class="button">Request a free consultation</button>
-            </div><!-- end offerInfo -->
-        </section><!-- end offer section --> 
+        <div class="fullpage" id="fullpage">
+
+            <section class="fp-section main-screen">
+                <div class="background-slider">
+                    <div class="slide" style="background-image: url(images/slide-1.jpg);"></div>
+                    <div class="slide" style="background-image: url(images/slide-2.jpg);"></div>
+                    <div class="slide" style="background-image: url(images/slide-3.jpg);"></div>
+                    <div class="slide" style="background-image: url(images/slide-4.jpg);"></div>
+                </div> <!-- end .background-slider  -->
+
+                <div class="wrapper">
+                    <h1 class="fp-main-title">Equipment & Spare Parts</h1>
+                </div>
+
+                <button class="fp-scroll-down"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+            </section> <!-- end .fp-section -->
+
+            <section class="fp-section" style="background-image: url(images/section-2.jpg); ">
+                <div class="wrapper">
+                    <h2 class="fp-section-title">Clients and partners</h2>
+                </div>
+                <button class="fp-scroll-down"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+            </section> <!-- end .fp-section -->
+
+            <section class="fp-section"></section> <!-- end .fp-section -->
+
+        </div> <!-- end .fullpage -->
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
+
+        <footer class="fullpage-footer">
+            <div class="flex-container">
+                <p class="socials">
+                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </p>
+                <p class="phone">
+                    <a href="tel:+971 4 221 2278">+971 4 221 2278</a>
+                </p>
+                <p class="email">
+                    <a href="mailto:info@globalpartsenterprises.com">info@globalpartsenterprises.com</a>
+                </p>
+            </div>
+        </footer>
 
         <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
 
@@ -84,6 +123,9 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+        <script src="js/jquery.fullpage.min.js"></script>
+        <script src="js/jquery.fullpage.extensions.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>

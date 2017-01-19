@@ -26,6 +26,40 @@ function exist(el){
 jQuery(document).ready(function($) {
 
     /*---------------------------
+                                  FULLPAGE
+    ---------------------------*/
+    if ( exist('#fullpage') ) {
+        $('#fullpage').fullpage({
+            sectionSelector: '.fp-section',
+            slideSelector: '.fp-slide',
+            responsiveWidth: 1200,
+            lockAnchors: false,
+            anchors:['section-1', 'section-2', 'section-3'],
+        })
+
+        $('.fp-scroll-down').on('click', function(event) {
+            event.preventDefault();
+            $.fn.fullpage.moveSectionDown();
+        });
+    }
+
+    /*---------------------------
+                                  Background-slider
+    ---------------------------*/
+    $('.background-slider').slick({
+        fade: true,
+        dots: false,
+        arrows: false,
+        easing: 'ease-in-out',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 2000,
+        pauseOnHover: false
+    })
+
+
+
+    /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
     $(function() { 
@@ -43,7 +77,7 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
-    $('.mainNav a, .anchor').click(function() {
+    $('.main-header a, .anchor').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
         }, 800);
