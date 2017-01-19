@@ -33,8 +33,8 @@ jQuery(document).ready(function($) {
             sectionSelector: '.fp-section',
             slideSelector: '.fp-slide',
             responsiveWidth: 1200,
-            lockAnchors: false,
-            anchors:['section-1', 'section-2', 'section-3'],
+            lockAnchors: true,
+            anchors:['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6'],
             navigation: true,
             navigationPosition: 'right',
         })
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
-    $('.main-header a, .anchor').click(function() {
+    $('.anchor').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
         }, 800);
@@ -135,6 +135,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
         if ($('header').hasClass('active')) {
                 $('body').css('overflow', 'hidden');
             } else {

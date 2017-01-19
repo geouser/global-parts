@@ -28,13 +28,19 @@
                                                     <!-- HEADER -->
         <header class="main-header fixed">
             <div class="wrapper">
-                <button class="side-menu-button">
+                <button class="side-menu-button" data-label="Products menu">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </button><!-- end toggle mobile menu -->
-                <div class="flex-container">
+                <div class="flex-container mobile-menu">
                     <div class="site-logo">
                         <a href="#"><img src="images/site-logo.png" alt=""></a>
+                    </div>
+                    <div class="mobile-search">
+                        <form action="">
+                            <input type="text" name="s" placeholder="Enter your search term ...">
+                            <button class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>    
                     </div>
                     <nav class="main-menu"><!-- start navigation -->
                         <ul>
@@ -49,7 +55,7 @@
                         </ul>
                     </nav><!-- end main-menu -->
                 </div> <!-- end .flex-container -->
-                <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="search-button magnific" href="#search-popup"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div><!-- end wrapper -->
         </header><!-- end header -->
 
@@ -106,7 +112,7 @@
             <i class="close" aria-hidden="true"></i>
         </aside>
         
-        <button class="menu-button"> 
+        <button class="menu-button" data-label="Menu"> 
             <span class="menu-line top_line"></span>
             <span class="menu-line middle_line"></span>
             <span class="menu-line bottom_line"></span>
@@ -337,28 +343,95 @@
                 </div>
             </section> <!-- end .fp-section -->
 
+
+            <section class="fp-section about-section" style="background-image: url(images/section-4.jpg);">
+                <div class="wrapper">
+                    <div class="flex-container">
+                        <div class="about-text">
+                            <h2>About Us</h2>
+                            <p>Global Parts Enterprises(L.L.C) is a professionally managed, multimillion dollar organization, catering to a global market in export and re-export of spare parts to over 100 countries Worldwide (Genuine and Replacement). Global Parts Enterprises L.L.C, came into existence through the vision of a first generation enterpreneur.</p>
+                            <p>In a short span of time, it has built an enviable clientele and reputation of trustworthiness. Handling over 100 genuine and 500 replacement brands, the organization exports to over 100 countries worldwide, with a formidable presence in the USA.</p>
+                            <div class="person">
+                                <p class="person-name">Lorem Ipsum</p>
+                                <p class="person-position">Founder of Global Parts</p>
+                            </div>
+                        </div>
+                        <div class="about-image">
+                            <img src="images/founder.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="fp-scroll-down"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+            </section> <!-- end .fp-section -->
+
+
+            <section class="fp-section news-section" style="background-image: url(images/section-5.jpg);">
+                <div class="wrapper">
+                    <h2 class="fp-section-title">Our News and Events</h2>
+
+                    <div class="news-box">
+                        <div class="post-preview">
+                            <div class="post-preview__thumbnail" style="background-image: url(images/news-1.jpg);"></div>
+                            <div class="post-preview__content">
+                                <h3 class="title">Global Parts Enterprices</h3>
+                                <date class="date">10 December 2016</date>
+                                <div class="excerpt">
+                                    <p>Global Parts Enterprises(L.L.C) is a professionally managed, multimillion dollar organization, catering to a global market in export and re-export of spare parts to over 100 countries Worldwide (Genuine and Replacement). </p>
+                                </div>
+                                <a href="#" class="readmore">Read more</a>
+                            </div>
+                        </div> <!-- end .post-preview -->
+                        <div class="post-preview">
+                            <div class="post-preview__thumbnail" style="background-image: url(images/news-1.jpg);"></div>
+                            <div class="post-preview__content">
+                                <h3 class="title">Global Parts Enterprices</h3>
+                                <date class="date">10 December 2016</date>
+                                <div class="excerpt">
+                                    <p>Global Parts Enterprises(L.L.C) is a professionally managed, multimillion dollar organization, catering to a global market in export and re-export of spare parts to over 100 countries Worldwide (Genuine and Replacement). </p>
+                                </div>
+                                <a href="#" class="readmore">Read more</a>
+                            </div>
+                        </div> <!-- end .post-preview -->
+                    </div>
+                </div>
+            </section> <!-- end .fp-section -->
+
+
+            <section class="fp-section footer-section" style="background-image: url(images/section-5.jpg);">
+                
+            </section> <!-- end .fp-section -->
+
         </div> <!-- end .fullpage -->
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
         <footer class="fullpage-footer">
-            <div class="flex-container">
-                <p class="socials">
-                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                </p>
-                <p class="phone">
-                    <a href="tel:+971 4 221 2278">+971 4 221 2278</a>
-                </p>
-                <p class="email">
-                    <a href="mailto:info@globalpartsenterprises.com">info@globalpartsenterprises.com</a>
-                </p>
+            <div class="wrapper">
+                <div class="flex-container">
+                    <p class="socials">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </p>
+                    <p class="phone">
+                        <a href="tel:+971 4 221 2278">+971 4 221 2278</a>
+                    </p>
+                    <p class="email">
+                        <a href="mailto:info@globalpartsenterprises.com">info@globalpartsenterprises.com</a>
+                    </p>
+                </div>    
             </div>
         </footer>
 
         <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+
+        <div id="search-popup" class="mfp-hide zoom-anim-dialog search-popup">
+            <form action="">
+                <input type="text" name="s" placeholder="Enter your search term ...">
+                <button class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Ваша заявка принята =)</p>
