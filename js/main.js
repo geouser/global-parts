@@ -35,6 +35,8 @@ jQuery(document).ready(function($) {
             responsiveWidth: 1200,
             lockAnchors: false,
             anchors:['section-1', 'section-2', 'section-3'],
+            navigation: true,
+            navigationPosition: 'right',
         })
 
         $('.fp-scroll-down').on('click', function(event) {

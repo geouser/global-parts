@@ -132,6 +132,7 @@
     left: 100px;
     right: auto;
     top: 50%;
+    width: 22px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -139,6 +140,7 @@
     background-color: transparent;
     font-size: 25px;
     color: $blue;
+    padding: 0;
 
     .fa-times {
         display: none;
@@ -150,7 +152,7 @@
 }
 
 .search-button {
-    width: 50px;
+    width: auto;
     height: 50px;
     background-color: transparent;
     border: 0;

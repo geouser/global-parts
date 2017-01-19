@@ -25,4 +25,16 @@ body {
 
 .flex-container {
     @include flex();
+
+    .col-4 {
+        width: 25%;
+    }
+
+    .col-3 {
+        width: 33.333%;
+    }
+
+    .col-2 {
+        width: 50%;
+    }
 }
