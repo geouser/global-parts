@@ -2,11 +2,23 @@
     margin-bottom: -20px;
 
     .flex-container {
-        @include flex($alignI: flex-start, $justify: flex-start);
+        @include flex($alignI: stretch, $justify: flex-start);
         margin: 0 -10px;
 
         .col-4 {
             padding: 0 10px;
+
+            @media (max-width: 991px) {
+                width: 33.33%;
+            }
+
+            @media (max-width: 650px) {
+                width: 50%;
+            }
+
+            @media (max-width: 420px) {
+                width: 100%;
+            }
         }
     }
 }
@@ -22,6 +34,18 @@
     font-size: 18px;
     margin-bottom: 20px;
 
+    @media (max-width: 1199px) {
+        padding: 20px 0 60px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+
     &:before {
         padding-top: 100%;
         content: '';
@@ -29,6 +53,10 @@
         display: block;
         position: relative;
         z-index: -1;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
     }
 
     &:after {
@@ -44,6 +72,10 @@
         -webkit-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
+
+        @media (max-width: 1199px) {
+            opacity: 0.65;
+        }
     }
 
     &__label {
@@ -66,6 +98,16 @@
         transition: all 0.3s ease;
         opacity: 1;
         visibility: visible;
+
+        @media (max-width: 1199px) {
+            position: static;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1!important;
+            visibility: visible!important;
+        }
     }
 
     &__readmore {
@@ -86,6 +128,12 @@
         padding: 10px 0;
         text-transform: uppercase;
 
+        @media (max-width: 1199px) {
+            opacity: 1;
+            visibility: visible;
+            background-color: rgba(0, 0, 0, .75);
+        }
+
         &:hover {
             background-color: rgba(0, 0, 0, 0.75);
         }
@@ -105,6 +153,12 @@
         visibility: hidden;
         text-align: center;;
         letter-spacing: 0.025em;
+
+        @media (max-width: 1199px) {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+        }
     }
 
 

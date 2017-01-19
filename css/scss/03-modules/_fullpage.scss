@@ -44,12 +44,16 @@
         transition: all 0.3s ease;
         font-size: 30px;
 
-        @media (max-height: 800px) {
+        @media (min-width: 1200px) and (max-height: 800px) {
             bottom: 100px;
         }
 
-        @media (max-height: 700px) {
+        @media (min-width: 1200px) and (max-height: 700px) {
             bottom: 75px;
+        }
+
+        @media (max-width: 1199px) {
+            display: none;
         }
 
         &:hover {
@@ -68,6 +72,10 @@
     @media (max-width: 1550px) {
         font-size: 64px;
     }
+
+    @media (max-width: 767px) {
+        font-size: 52px;
+    }
 }
 
 .fp-section-title {
@@ -80,6 +88,10 @@
 
     @media (max-width: 1550px) {
         font-size: 52px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 40px;
     }
 }
 
@@ -123,8 +135,17 @@
         padding-top: 0;
     }
 
+    @media (max-width: 1199px) {
+        padding: 0 15px;
+        text-align: center;
+    }
+
     .flex-container {
         @include flex($alignI: center, $justify: center);
+
+        @media (max-width: 1199px) {
+            display: inline;
+        }
 
         &:not(:last-of-type) {
             margin-bottom: 50px;
@@ -139,6 +160,21 @@
         width: 12.5%;
         padding: 0 10px;
 
+        @media (max-width: 1199px) {
+            width: 150px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 500px) {
+            width: 31%;
+        }
+
+        @media (max-width: 370px) {
+            width: 47%;
+        }
+
         img {
             width: 100%;
             display: block;
@@ -149,6 +185,16 @@
 /*products-section*/
 .products-section .fp-section-title {
     margin-bottom: 20px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 40px;
+    } 
+}
+.products-section {
+    @media (max-width: 1199px) {
+        background-image: none!important;
+        background-color: #BCBCBC;
+    }
 }
 .products-section .products-box {
     @media (min-width: 1200px) and (max-height: 920px) {
@@ -190,6 +236,11 @@
 
 /*about section*/
 .about-section {
+
+    @media (max-width: 767px) {
+        background-color: #BCBCBC;
+        background-image: none!important;
+    }
     .about-text {
         width: 50%;
         text-align: left;
@@ -231,6 +282,7 @@
 
         img {
             width: 500px;
+            max-width: 90%;
         }
     }
 
@@ -244,6 +296,34 @@
             h2 {
                 font-size: 56px;
                 margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .flex-container {
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .about-text {
+            width: 100%;
+
+            .person {
+                text-align: center;
+            }
+        }
+
+        .about-image {
+            padding-top: 50px;
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 290px;
             }
         }
     }
@@ -356,20 +436,56 @@
 
 
 .fullpage-footer {
-    padding: 18px 100px;
+    padding: 18px 0;
     background-color: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.52);
+
+    .wrapper {
+        width: 100%;
+        padding: 0 100px;
+
+        @media (max-width: 1550px) {
+            width: 1200px;
+            padding: 0;
+        }
+
+        @media (max-width: 1240px) {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
 
     @media (min-width: 1200px) and (max-height: 700px) {
-        padding: 10px 100px;
+        padding: 10px 0;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 10px 0;
+    }
+
+    @media (max-width: 767px) {
+        padding: 7px 0;
     }
 
     p {
         width: 33.33%;
         font-size: 21px;
+
+        @media (max-width: 1199px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+            width: 50%
+        }
 
         a {
             color: $grey;
@@ -386,6 +502,11 @@
             margin-right: 40px;
             font-size: 24px;
 
+            @media (max-width: 991px) {
+                font-size: 20px;
+                margin-right: 20px;
+            }
+
             &:hover {
                 color: $red;
             }
@@ -395,10 +516,18 @@
     .phone {
         text-align: center;
         color: $blue;
+
+        @media (max-width: 767px) {
+            text-align: right;
+        }
     }
 
     .email {
         text-align: right;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 
     .phone,

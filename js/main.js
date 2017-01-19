@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
     /*---------------------------
                                 PAGE ANCHORS
     ---------------------------*/
-    $('.main-header a, .anchor').click(function() {
+    $('.anchor').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
         }, 800);
@@ -114,6 +114,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
         if ($('header').hasClass('active')) {
                 $('body').css('overflow', 'hidden');
             } else {
