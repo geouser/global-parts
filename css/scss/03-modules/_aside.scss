@@ -1,0 +1,148 @@
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: -webkit-calc(100% - 68px);
+    height: calc(100% - 68px);
+    border: 3px solid #fff;
+    width: 362px;
+    z-index: 100;
+    @include transition(all,.4s);
+    -webkit-transform: translateY(-100%);
+       -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+         -o-transform: translateY(-100%);
+            transform: translateY(-100%);
+    @media (max-height: 700px) and (min-width: 1200px) {
+        height: -webkit-calc(100% - 52px);
+        height: calc(100% - 52px);
+    }
+    &.active {
+        -webkit-transform: translateY(0%);
+       -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+         -o-transform: translateY(0%);
+            transform: translateY(0%);
+    }
+    .close {
+        display: block;
+       font-family: 'FontAwesome';
+       content: "\f00d";
+       display: inline-block;
+       padding-right: 3px;
+       vertical-align: middle;
+       position: absolute;
+       right: -40px;
+       top: 20px;
+       width: 20px;
+       height: 20px;
+       cursor: pointer;
+       background-image: url("../images/close.svg");
+       -webkit-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+               background-size: 100% 100%;
+       z-index: 100;
+       font-weight: 100;
+    }
+    .mCSB_container {
+        margin: 0 !important;
+    }
+    .mCSB_scrollTools_vertical {
+        visibility: hidden;
+    }
+    .sidebar-menu-nav {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: #FFF;
+        #mCSB_1_container > li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 4px solid #fff;
+            > a {
+                display: block;
+                vertical-align: middle;
+                color: #FFF;
+                font: 30px $rm;
+                width: 100%;
+                height: 206px;
+                background-position: 50% 50%;
+                -webkit-background-size: cover;
+                     -o-background-size: cover;
+                        background-size: cover;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 200px;
+                    text-shadow: 0px 0px 118.3px rgba(0, 0, 0, 0.68);
+                }
+            }
+            .sub-menu {
+                display: none;
+                background-color: #FFF;
+                li {
+                    a {
+                        font: 18px/50px $rm;
+                        text-align: center;
+                        color: #434343;
+                        display: block;
+                        background-color: transparent;
+                        background-image: url("../images/sub-menu-border.png");
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                        &:hover {
+                            background: #DFDFDF;
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .down-menu {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20px;
+        color: #FFF;
+        font-size: 36px;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+
+body:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 6;
+    background-color: rgba(0,0,0,.45);
+    -webkit-transition: opacity .4s;
+       -moz-transition: opacity .4s;
+        -ms-transition: opacity .4s;
+         -o-transition: opacity .4s;
+            transition: opacity .4s;
+}
+body.overlay:after {
+    visibility: visible;
+    opacity: 1;
+}

@@ -45,6 +45,27 @@ jQuery(document).ready(function($) {
         });
     }
 
+    $('.sidebar-menu-nav a').click(function(event){
+        event.preventDefault();
+        $(this).siblings('ul').slideToggle();
+    });
+
+
+    var top = 0;
+
+    $('.sidebar-menu-nav').mCustomScrollbar({
+        callbacks:{
+            onScroll:function(){
+              top = Math.abs(parseInt($('#mCSB_1_container').css('top')));
+            }
+        }
+    });
+
+    $('.down-menu').click(function(){
+        $('.sidebar-menu-nav').mCustomScrollbar("scrollTo", top + 206);
+    });
+
+
     /*---------------------------
                                   Background-slider
     ---------------------------*/
@@ -119,6 +140,17 @@ jQuery(document).ready(function($) {
             } else {
                 $('body').css('overflow', 'visible');
             }
+    });
+
+    $('.side-menu-button').on('click', function(event) {
+        event.preventDefault();
+        $('body').addClass('overlay');
+        $('.sidebar-menu').toggleClass('active');
+    });
+    $('.sidebar-menu .close').on('click', function(event) {
+        event.preventDefault();
+        $('body').removeClass('overlay');
+        $('.sidebar-menu').removeClass('active');
     });
 
 
