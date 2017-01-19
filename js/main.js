@@ -33,8 +33,8 @@ jQuery(document).ready(function($) {
             sectionSelector: '.fp-section',
             slideSelector: '.fp-slide',
             responsiveWidth: 1200,
-            lockAnchors: false,
-            anchors:['section-1', 'section-2', 'section-3'],
+            lockAnchors: true,
+            anchors:['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6'],
             navigation: true,
             navigationPosition: 'right',
         })

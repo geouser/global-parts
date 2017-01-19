@@ -1,0 +1,91 @@
+.post-preview {
+    @include flex($alignI: stretch);
+    background-color: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.52);
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__thumbnail {
+        width: 25%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    &__content {
+        width: 75%;
+        padding: 35px 50px;
+        text-align: center;
+        position: relative;
+
+        .title {
+            font-size: 30px;
+            width: 100%;
+            letter-spacing: 0.05em;
+            color: $blue;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 200px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .date {
+            line-height: 39px;
+            position: absolute;
+            top: 35px;
+            right: 50px;
+            font-size: 18px;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .excerpt {
+            position: relative;
+            font-size: 21px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            height: 90px;
+            overflow: hidden;
+            width: 100%;
+            text-align: left;
+
+            &:after {
+                content: '';
+                width: 50%;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background: -moz-linear-gradient(left, rgba(226,226,226,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,226,226,0)), color-stop(50%, rgba(255,255,255,0.95)), color-stop(100%, rgba(255,255,255,1)));
+                background: -webkit-linear-gradient(left, rgba(226,226,226,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,1) 100%);
+                background: -o-linear-gradient(left, rgba(226,226,226,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,1) 100%);
+                background: -ms-linear-gradient(left, rgba(226,226,226,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,1) 100%);
+                background: linear-gradient(to right, rgba(226,226,226,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,1) 100%);
+            }
+        }
+
+        .readmore {
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0 auto;
+            width: auto;
+            color: $blue;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            font-size: 21px;
+            font-family: $rb;
+            letter-spacing: 0.075em;
+            margin-top: 25px;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
