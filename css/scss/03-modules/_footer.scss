@@ -193,12 +193,19 @@
         a {
             display: inline-block;
             vertical-align: middle;
-            margin: 0 44px;
+            margin: 0 40px;
+            color: #434343;
+            font-size: 28px;
+            -webkit-transition: all .2s;
+               -moz-transition: all .2s;
+                -ms-transition: all .2s;
+                 -o-transition: all .2s;
+                    transition: all .2s;
             @media (max-width: 1050px) {
-                margin: 0 30px;
+                margin: 0 26px;
             }
             @media (max-width: 850px) {
-                margin: 0 20px;
+                margin: 0 16px;
             }
             &:first-child {
                 margin: 0;
@@ -206,7 +213,9 @@
             &:last-child {
                 margin: 0;
             }
-
+            &:hover {
+                color: #1A5096;
+            }
             img {
                 display: block;
                 height: 1rem;
