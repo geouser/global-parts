@@ -256,3 +256,21 @@
     background-color: transparent;
     color: #FFF;
 }
+
+.fp-section {
+    .footer {
+        background-color: transparent;
+        color: #fff;
+    }
+    .footer-menu .menu .sub-menu a,
+    .footer-menu .menu > .menu-item > a,
+    .footer .socials a {
+        color: #FFF;
+    }
+    .footer .socials a:hover {
+        color: #1A5096;
+    }
+    .footer-menu .menu .sub-menu a:after {
+        background-color: #FFF;
+    }
+}
