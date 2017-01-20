@@ -1,0 +1,35 @@
+.contacts-form {
+    width: 580px;
+    display: block;
+    margin: 75px auto 15px;
+}
+
+
+.map_canvas {
+    width: 100%;
+    height: 550px;
+    margin: 50px 0 100px;
+
+    .gm-style a,
+    .gmnoprint {
+        display: none!important;
+    }
+}
+
+.contacts-info {
+    @include flex($alignI: flex-start, $justify: flex-start);
+    margin: 0 -10px 100px;
+
+    .col-4 {
+        text-align: left;
+        font-size: 18px;
+        padding: 0 10px;
+
+        .title {
+            font-family: $rm;
+            font-size: 30px;
+            color: $blue;
+            margin-bottom: 15px;
+        }
+    }
+}

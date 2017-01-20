@@ -13,7 +13,8 @@
         @media (max-width: 1199px) {
             margin-top: 0;
         }
-        h1 {
+        h1,
+        h2 {
             color: #FFF !important;
         }
         &:before {
@@ -24,7 +25,8 @@
         }
     }
     text-align: center;
-    h1 {
+    h1,
+    h2 {
         display: inline-block;
         vertical-align: middle;
         max-width: 80%;
