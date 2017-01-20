@@ -1,3 +1,22 @@
 .offer {
-    height: 800px;
+    height: 555px;
+    margin: 40px auto 90px;
+    text-align: center;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 80%;
+        font: 72px $rb;
+        color: #FFF;
+    }
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        height: 100%;
+    }
 }
