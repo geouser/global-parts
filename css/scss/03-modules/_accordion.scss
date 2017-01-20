@@ -1,0 +1,76 @@
+.accordion {
+    text-align: left;
+    margin-bottom: 70px;
+
+    &__link {
+        font-size: 30px;
+        font-family: $rm;
+        letter-spacing: 0.05em;
+        line-height: 30px;
+        text-align: left;
+        padding: 20px 90px 20px 0;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        position: relative;
+
+        .fa {
+            position: absolute;
+            right: 0;
+            top: 20px;
+            line-height: 30px;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        &.ui-state-active,
+        &.ui-state-hover {
+            color: $blue;
+        }
+
+        &.ui-state-active {
+            .fa {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+
+        @media (max-width: 991px) {
+            font-size: 26px;
+            line-height: 26px;
+
+            .fa {
+                line-height: 26px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 24px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 40px;
+
+            .fa {
+                line-height: 24px;
+                top: 15px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 20px 0 0;
+
+        &:not(:last-of-type) {
+            padding-bottom: 70px;
+        }
+    }
+
+    .cv-button {
+        margin-top: 45px;
+    }
+}

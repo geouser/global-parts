@@ -91,7 +91,8 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if ( exist('.accordion') ) {
         $( ".accordion" ).accordion({
-            heightStyle: "content"
+            heightStyle: "content",
+            collapsible: true,
         });
     }
 
