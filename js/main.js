@@ -45,6 +45,11 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+
+    /*---------------------------
+                                  Side menu
+    ---------------------------*/
     $('.sidebar-menu-nav a').click(function(event){
         event.preventDefault();
         $(this).siblings('ul').slideToggle();
@@ -79,6 +84,16 @@ jQuery(document).ready(function($) {
         speed: 2000,
         pauseOnHover: false
     })
+
+
+    /*---------------------------
+                                  ACCORDION
+    ---------------------------*/
+    if ( exist('.accordion') ) {
+        $( ".accordion" ).accordion({
+            heightStyle: "content"
+        });
+    }
 
 
 
