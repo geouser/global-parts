@@ -168,6 +168,11 @@ article {
     @media (max-width: 1200px) {
         padding-top: 10px;
     }
+    @media (max-width: 800px) {
+            background-position: -22% 26%;
+            -webkit-background-size: 70% auto;
+            background-size: 70% auto;
+    }
     article {
         background-color: #FFF;
         padding: 65px 75px;
