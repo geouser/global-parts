@@ -6,7 +6,9 @@ body {
 	height: 100%;
     font-family: $r;
     color: $grey;
-
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
 }
 body:not(.home) {
     @media (min-width: 1200px) {

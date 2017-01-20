@@ -49,6 +49,10 @@
         @media (max-width: 1000px) {
             padding-right: 0;
         }
+        @media (max-width: 600px) {
+            font-size: 17px;
+            line-height: 1.5;
+        }
     }
 
     &-menu {
@@ -160,6 +164,9 @@
 
                 .menu-item {
                     margin-bottom: 0.33rem;
+                    @media (max-width: 600px) {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

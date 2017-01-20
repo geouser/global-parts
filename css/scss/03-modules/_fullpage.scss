@@ -19,6 +19,9 @@
         @media (max-width: 1199px) {
             padding: 100px 0;
         }
+        @media (max-width: 700px) {
+            padding: 80px 0;
+        }
     }
 
     &.main-screen .fp-tableCell {
@@ -242,10 +245,20 @@
 
 /*about section*/
 .about-section {
-
+    -webkit-background-size: 60% auto;
+    background-size: 60% auto;
+    background-position: 120% 70%;
+    background-position: 120% 70%;
+    background-color: #BCBCBC;
+    @media (max-width: 1000px) {
+        -webkit-background-size: 110% auto;
+        background-size: 70% auto;
+        background-position: 140% 104%;
+    }
     @media (max-width: 767px) {
-        background-color: #BCBCBC;
-        background-image: none!important;
+        -webkit-background-size: 110% auto;
+        background-size: 110% auto;
+        background-position: -80% 104%;
     }
     .about-text {
         width: 50%;
@@ -302,6 +315,21 @@
             h2 {
                 font-size: 56px;
                 margin-bottom: 10px;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+      .about-text { 
+        font-size: 17px;
+            h2 {
+                font-size: 46px;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .about-text { 
+            h2 {
+                font-size: 36px;
             }
         }
     }
