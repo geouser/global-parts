@@ -107,7 +107,7 @@
     }
     .down-menu {
         position: absolute;
-        bottom: 20px;
+        bottom: 10px;
         left: 0;
         right: 0;
         margin: auto;
@@ -116,6 +116,19 @@
         font-size: 36px;
         cursor: pointer;
         z-index: 100;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        -webkit-box-shadow: inset 0px -41px 41px -18px rgba(0,0,0,0.95);
+        -moz-box-shadow: inset 0px -41px 41px -18px rgba(0,0,0,0.95);
+        box-shadow: inset 0px -41px 41px -18px rgba(0,0,0,0.95);
+        z-index: 2;
     }
 }
 
@@ -131,7 +144,7 @@ body:after {
     height: 100%;
     visibility: hidden;
     opacity: 0;
-    z-index: 6;
+    z-index: 16;
     background-color: rgba(0,0,0,.45);
     -webkit-transition: opacity .4s;
        -moz-transition: opacity .4s;
