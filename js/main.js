@@ -85,7 +85,35 @@ jQuery(document).ready(function($) {
         pauseOnHover: false
     })
 
+    $('.photo-slider').slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+    });
 
+    $('.photo-slider').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+              enabled:true
+            }
+        });
+    });
     /*---------------------------
                                   ACCORDION
     ---------------------------*/

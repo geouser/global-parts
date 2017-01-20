@@ -190,3 +190,13 @@
         opacity: .75;
     }
 }
+
+.products-title {
+    display: block;
+    color: $blue;
+    text-align: left;
+    font: 30px $rm;
+    @media (max-width: 600px) {
+        font-size: 26px;
+    }
+}
