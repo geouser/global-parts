@@ -2,7 +2,8 @@
     background-color: #fff;
     padding: 70px 0 75px;
     letter-spacing: 0.025em;
-    color: #434343;
+    color: $grey;
+
     @media (max-width: 1600px) {
         padding: 60px 0 65px;
     }
@@ -72,9 +73,9 @@
                  max-width: 100%;
              }
             @media (max-width: 800px) {
-                width: 100%;
+                width: 150px;
                 display: block;
-                text-align: left;
+                margin: 30px auto;
                 img {
                     display: inline-block;
                     vertical-align: middle;
@@ -131,7 +132,7 @@
                         display: block;
                         position: absolute;
                         border-top: 2px;
-                        height: 1px;
+                        height: 2px;
                         background-color: #434343;
                         left: 0;
                         right: 0;
@@ -203,8 +204,8 @@
         text-align: center;
         margin-top: 30px;
         @media (max-width: 800px) {
-            margin-top: 0;
-            display: inline-block;
+            margin-top: 30px;
+            display: block;
             vertical-align: middle;
         }
         a {
@@ -245,6 +246,27 @@
 
         a {
             color: inherit;
+        }
+    }
+
+
+    &--dark {
+        background-color: $grey;
+        color: #fff;
+
+        .menu > .menu-item > a {
+            color: #fff;
+        }
+
+        .menu .sub-menu a {
+            color: #fff;
+        }
+
+        .menu .sub-menu a:after {
+            background-color: #fff;
+        }
+        .socials a {
+            color: #fff;
         }
     }
 }

@@ -285,6 +285,11 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    cursor: pointer;
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
 
     &:hover {
         color: $red;
