@@ -17,8 +17,16 @@
     &-title {
         display: block;
         font-family: $r;
-        font-size: 2.25rem;
+        font-size: 48px;
         margin-bottom: 80px;
+        @media (max-width: 600px) {
+            font-size: 38px;
+            margin-bottom: 60px;
+        }
+        @media (max-width: 400px) {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
     }
 
     &-options {
@@ -34,7 +42,7 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
             @media (max-width: 600px) {
-                margin: 10px 30px;
+                margin: 0px 30px 20px;
             }
             &:hover {
                 -webkit-transform: scale(1.1);
