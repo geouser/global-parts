@@ -44,12 +44,6 @@
             @media (max-width: 600px) {
                 margin: 0px 30px 20px;
             }
-            &:hover {
-                -webkit-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -o-transform: scale(1.1);
-                transform: scale(1.1);
-            }
 
             img {
                 display: block;
@@ -64,7 +58,28 @@
                 margin-top: 8px;
                 display: block;
                 text-align: center;
+                position: relative;
+                 &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        border-top: 2px;
+                        height: 2px;
+                        background-color: #fff;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        max-width: 0;
+                        -webkit-transition: all .2s;
+                           -moz-transition: all .2s;
+                            -ms-transition: all .2s;
+                             -o-transition: all .2s;
+                                transition: all .2s;
+                    }
             }
+            &:hover span:after {
+                        max-width: 100%;
+                    }
         }
     }
 }
