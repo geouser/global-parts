@@ -3,7 +3,6 @@
     padding: 70px 0 75px;
     letter-spacing: 0.025em;
     color: #434343;
-    font-family: $r;
     @media (max-width: 1600px) {
         padding: 60px 0 65px;
     }
@@ -232,7 +231,7 @@
                 margin: 0;
             }
             &:hover {
-                color: #1A5096;
+                color: $red;
             }
             img {
                 display: block;
