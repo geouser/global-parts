@@ -3,7 +3,7 @@
     left: 0;
     top: 0;
     height: -webkit-calc(100% - 68px);
-    height: calc(100% - 68px);
+    height: 100%;
     border: 3px solid #fff;
     width: 362px;
     z-index: 100;
@@ -13,10 +13,6 @@
         -ms-transform: translateY(-100%);
          -o-transform: translateY(-100%);
             transform: translateY(-100%);
-    @media (max-height: 700px) and (min-width: 1200px) {
-        height: -webkit-calc(100% - 52px);
-        height: calc(100% - 52px);
-    }
     &.active {
         -webkit-transform: translateY(0%);
        -moz-transform: translateY(0%);
@@ -145,4 +141,15 @@ body:after {
 body.overlay:after {
     visibility: visible;
     opacity: 1;
+}
+
+.home {
+    .sidebar-menu {
+        height: -webkit-calc(100% - 68px);
+        height: calc(100% - 68px);
+        @media (max-height: 700px) and (min-width: 1200px) {
+            height: -webkit-calc(100% - 52px);
+            height: calc(100% - 52px);
+        }
+    }
 }
