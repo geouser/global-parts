@@ -158,5 +158,8 @@ body.overlay:after {
 main {
     .products-box {
         margin: 40px auto;
+        @media (max-width: 600px) {
+            margin: 20px auto;
+        }
     }
 }

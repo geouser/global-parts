@@ -535,3 +535,15 @@
         font-family: $rm;
     }
 }
+
+.fullpage--single {
+    .fp-scroll-down,
+    #fp-nav {
+        display: none;
+    }
+}
+.onepage {
+    #fp-nav {
+        display: none;
+    }
+}

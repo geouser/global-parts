@@ -208,6 +208,9 @@
         -o-transition-delay: 0.7s;
         transition-delay: 0.7s;
     }    
+    .onepage .main-header {
+        background-color: #FFF !important;
+    }
 }
 
 
@@ -244,6 +247,7 @@
     .top_line              {   top: 12px;  margin: auto;}
     .middle_line           {   top: 22px;  margin: auto;}
     .bottom_line           {   bottom: 12px; margin: auto;}
+
 
     &.active               {
         -webkit-transform: translateX(-260px);
