@@ -1,0 +1,22 @@
+.button {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0;
+    background-color: $blue;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 60px;
+    font-family: $rm;
+    font-size: 21px;
+    letter-spacing: 0.075em;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $red;
+    }
+}
