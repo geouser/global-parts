@@ -6,12 +6,26 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    @media (max-width: 1400px) {
+        height: 455px;
+        margin: 20px auto 40px;
+    }
+    @media (max-width: 1199px) {
+        margin-top: 0;
+    }
     h1 {
         display: inline-block;
         vertical-align: middle;
         max-width: 80%;
         font: 72px $rb;
         color: #FFF;
+        @media (max-width: 1550px) {
+            font-size: 64px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 52px;
+        }
     }
     &:before {
         display: inline-block;
