@@ -13,6 +13,10 @@
         @media (max-width: 1199px) {
             margin-top: 0;
         }
+
+        @media (max-width: 767px) {
+            height: 350px;
+        }
         h1,
         h2 {
             color: #FFF !important;

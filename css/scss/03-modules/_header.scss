@@ -105,10 +105,13 @@
             a:hover,
             &.current-menu-item a {
                 color: $red;
-
-                &:after {
-                    max-width: 100%;
+                
+                @media (min-width: 1200px) {
+                    &:after {
+                        max-width: 100%;
+                    }    
                 }
+                
             }
         }
     }
