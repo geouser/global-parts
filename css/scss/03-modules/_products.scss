@@ -33,7 +33,13 @@
     z-index: 1;
     font-size: 18px;
     margin-bottom: 20px;
-
+    outline: 1px solid transparent;
+    outline-offset: 0px;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
     @media (max-width: 1199px) {
         padding: 20px 0 60px;
     }
@@ -161,7 +167,10 @@
         }
     }
 
-
+    &:hover {
+        outline-color: #FFF;
+        outline-offset: -4px;
+    }
     &:hover &__label {
         opacity: 0;
         visibility: hidden;

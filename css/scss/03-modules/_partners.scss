@@ -1,0 +1,34 @@
+.partners {
+    margin-top: 80px;
+    span {
+        color: $blue;
+        text-align: center;
+        display: block;
+        font: 30px $rm;
+        @media (max-width: 1200px) {
+            font-size: 26px;
+        }
+    }
+}
+.partners__list {
+    width: 910px;
+    max-width: 100%;
+    margin: 0 auto;
+    @include flex($justify: space-around);
+    margin: 40px auto 90px;
+    img {
+        max-width: 19%;
+    }
+    @media (max-width: 1400px) {
+        margin: 30px auto 70px;
+    }
+    @media (max-width: 1200px) {
+        margin: 30px auto 70px;
+    }
+    @media (max-width: 600px) {
+        margin: 20px auto 50px;
+        img {
+            margin: 10px;
+        }
+    }
+}
