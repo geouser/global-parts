@@ -543,9 +543,24 @@
         display: none;
     }
 }
+
 .onepage {
     @include flex($direction: column, $alignI: center, $justify: center);
+    padding: 142px 0 68px;
+
+    @media (min-width: 1200px) and (max-height: 800px) {
+        padding: 122px 0 68px;
+    }
+
+    @media (min-width: 1200px) and (max-height: 700px) {
+        padding: 90px 0 52px;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 100px 0;
+    }
 }
+
 .photo-slider {
     margin-bottom: 0;
 }
