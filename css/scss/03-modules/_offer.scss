@@ -54,6 +54,9 @@
 article + .news-box {
     margin-top: 80px;
     margin-bottom: 40px;
+    @media (max-width: 767px) {
+        margin-top: 40px;
+    }
 }
 
 .share {
@@ -137,5 +140,11 @@ article + .news-box {
        .fp-section .fp-tableCell {
            padding: 0;
        }
+    }
+}
+
+@media (max-width: 800px) {
+    .offer__bg--leftCenter {
+        background-position: 24% 50%;
     }
 }
