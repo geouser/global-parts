@@ -2,6 +2,22 @@
     background-color: #BCBCBC;
     padding: 0 0 80px;
 
+    @media (min-width: 1200px) {
+        background-image: url(../images/ball.jpg);
+        background-position: 1400px 50%;
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width: 1700px) {
+        background-position: 1300px 50%;
+    }
+    @media (max-width: 1500px) {
+        background-position: 1100px 50%;
+    }
+    @media (max-width: 1300px) {
+        background-position: 900px 50%;
+    }
+
     .section-title + p {
         text-align: left;
         font-size: 21px;

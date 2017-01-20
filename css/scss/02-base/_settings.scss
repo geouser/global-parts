@@ -24,6 +24,9 @@ body:not(.home) {
         padding-top: 60px;
     }
 }
+body.no-padding {
+    padding-top: 0;
+}
 
 .section-title {
     font-size: 72px;
