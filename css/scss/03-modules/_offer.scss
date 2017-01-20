@@ -45,3 +45,22 @@ article + .news-box {
     margin-top: 80px;
     margin-bottom: 40px;
 }
+
+.share {
+    text-align: center;
+    margin: 40px auto 80px;
+    span {
+        display: block;
+        font: 30px $rm;
+        color: #434343;
+        margin-bottom: 18px;
+    }
+    a {
+        margin: 0 20px;
+        color: #434343;
+        font-size: 28px;
+        &:hover {
+            color: #1a5096;
+        }
+    }
+}
