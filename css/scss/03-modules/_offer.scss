@@ -1,13 +1,20 @@
 .offer {
-    margin: 40px auto 90px;
     &__bg {
         height: 555px;
+        margin: 40px auto 90px;
          background-position: 50% 50%;
-    -webkit-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
         @media (max-width: 1400px) {
             height: 455px;
+            margin: 20px auto 40px;
+        }
+        @media (max-width: 1199px) {
+            margin-top: 0;
+        }
+        h1 {
+            color: #FFF !important;
         }
         &:before {
             display: inline-block;
@@ -17,24 +24,43 @@
         }
     }
     text-align: center;
-    @media (max-width: 1400px) {
-        margin: 20px auto 40px;
-    }
-    @media (max-width: 1199px) {
-        margin-top: 0;
-    }
     h1 {
         display: inline-block;
         vertical-align: middle;
         max-width: 80%;
         font: 72px $rb;
-        color: #FFF;
+        color: #434343;
+        margin: 28px auto;
         @media (max-width: 1550px) {
             font-size: 64px;
         }
 
         @media (max-width: 767px) {
             font-size: 52px;
+        }
+    }
+}
+
+article + .news-box {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.share {
+    text-align: center;
+    margin: 40px auto 80px;
+    span {
+        display: block;
+        font: 30px $rm;
+        color: #434343;
+        margin-bottom: 18px;
+    }
+    a {
+        margin: 0 20px;
+        color: #434343;
+        font-size: 28px;
+        &:hover {
+            color: #1a5096;
         }
     }
 }

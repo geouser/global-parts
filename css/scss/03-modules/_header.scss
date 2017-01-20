@@ -3,7 +3,7 @@
     padding: 20px 0;
     background-color: #fff;
     position: relative;
-
+    
     .wrapper {
         @media (min-width: 1200px) and (max-width: 1240px) {
             width: 100%;
@@ -14,7 +14,16 @@
         -webkit-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
         transition: background-color 0.3s ease;
-
+        &.hasScrolled {
+            padding: 10px 0;
+                -webkit-transition: all .2s;
+           -moz-transition: all .2s;
+            -ms-transition: all .2s;
+             -o-transition: all .2s;
+                transition: all .2s;
+            -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+                    box-shadow: 0 0 10px rgba(0,0,0,.2);
+        }
         .mobile-search {
             display: none;
         }
