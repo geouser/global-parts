@@ -82,6 +82,27 @@
                 -webkit-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s ease;
+                position: relative;
+                &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        border-top: 2px;
+                        height: 2px;
+                        background-color: $red;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        max-width: 0;
+                        -webkit-transition: all .2s;
+                           -moz-transition: all .2s;
+                            -ms-transition: all .2s;
+                             -o-transition: all .2s;
+                                transition: all .2s;
+                    }
+                    &:hover:after {
+                        max-width: 100%;
+                    }
             }
 
             a:hover,
