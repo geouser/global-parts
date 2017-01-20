@@ -42,3 +42,24 @@
         }
     }
 }
+
+
+.popup {
+    width: 450px;
+    padding: 40px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+
+    .heading {
+        color: $blue;
+        font-family: $rb;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .msg {
+        font-size: 20px;
+    }
+}

@@ -323,19 +323,19 @@
                                 <li class="menu-item">
                                     <a href="">About Global Parts</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="">Home Page</a></li>
-                                        <li class="menu-item"><a href="">About Company</a></li>
-                                        <li class="menu-item"><a href="">Our Team</a></li>
-                                        <li class="menu-item"><a href="">Careers</a></li>
+                                        <li class="menu-item"><a href="index.html">Home Page</a></li>
+                                        <li class="menu-item"><a href="about.html">About Company</a></li>
+                                        <li class="menu-item"><a href="team.html">Our Team</a></li>
+                                        <li class="menu-item"><a href="careers.html">Careers</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item">
                                     <a href="">Quick Links</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item"><a href="">Products</a></li>
-                                        <li class="menu-item"><a href="">Media</a></li>
-                                        <li class="menu-item"><a href="">Partners</a></li>
-                                        <li class="menu-item"><a href="">Contacts</a></li>
+                                        <li class="menu-item"><a href="products.html">Products</a></li>
+                                        <li class="menu-item"><a href="media.html">Media</a></li>
+                                        <li class="menu-item"><a href="partners.html">Partners</a></li>
+                                        <li class="menu-item"><a href="contacts.html">Contacts</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -364,7 +364,69 @@
         <!-- //////////////////////////////////////////////////////////////////////// -->
 
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup-chat" class="mfp-hide zoom-anim-dialog popup">
+            <p class="heading">Start chat</p>
+            <form action="" class="form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea name="msg" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="form_id" value="chat">
+                    <button class="button">Send</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="modal-popup-email" class="mfp-hide zoom-anim-dialog popup">
+            <p class="heading">Send email</p>
+            <form action="" class="form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea name="msg" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="form_id" value="email">
+                    <button class="button">Send</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="modal-popup-cv" class="mfp-hide zoom-anim-dialog popup">
+            <p class="heading">Apply a job</p>
+            <form action="" class="form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="file" name="file">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="form_id" value="cv">
+                    <input type="hidden" name="job" value="">
+                    <button class="button">Send</button>
+                </div>
+            </form>
+        </div>
 
         <div id="search-popup" class="mfp-hide zoom-anim-dialog search-popup">
             <form action="">
@@ -384,13 +446,21 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- contacts page only -->
         <script src="http://maps.googleapis.com/maps/api/js"></script>
 
+        <!-- front-page only -->
         <script src="js/jquery.fullpage.min.js"></script>
         <script src="js/jquery.fullpage.extensions.min.js"></script>
-
+        
+        <!-- -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+        <!-- Careers page only -->
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>   

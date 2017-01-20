@@ -129,6 +129,10 @@ jQuery(document).ready(function($) {
             }
         });
     });
+
+
+
+
     /*---------------------------
                                   ACCORDION
     ---------------------------*/
@@ -139,6 +143,31 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+    /*---------------------------
+                                  Attach cv
+    ---------------------------*/
+    $('.js-send-cv').on('click', function(event) {
+        event.preventDefault();
+        var job = $(this).attr('data-title');
+        $('#modal-popup-cv').find('input[name=job]').val(job);
+        openPopup('#modal-popup-cv');
+    });
+
+    /*---------------------------
+                                  Custom file button
+    ---------------------------*/
+    $('input[type=file]').each(function(index, el) {
+        $(this).wrap('<div class="custom-file"></div>');
+        var parent = $(this).parent();
+        parent.append('<button class="button file-button" data-label="Attach a file">Attach a file</button>');
+
+        $(this).on('change', function(event) {
+            event.preventDefault();
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+            $(this).siblings('.file-button').text(filename);
+        });
+    });
 
 
     /*---------------------------
