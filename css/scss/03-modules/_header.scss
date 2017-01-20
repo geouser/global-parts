@@ -100,14 +100,15 @@
                              -o-transition: all .2s;
                                 transition: all .2s;
                     }
-                    &:hover:after {
-                        max-width: 100%;
-                    }
             }
 
             a:hover,
             &.current-menu-item a {
                 color: $red;
+
+                &:after {
+                    max-width: 100%;
+                }
             }
         }
     }
