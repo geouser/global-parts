@@ -153,3 +153,33 @@ article {
         width: 50%;
     }
 }
+
+.sphere-bg {
+    background-image: url("../images/ball.jpg");
+    background-color: #bcbcbc;
+    background-repeat: no-repeat;
+    background-position: -22% 50%;
+    -webkit-background-size: 61% auto;
+    background-size: 61% auto;
+    padding-top: 40px;
+    @media (max-width: 1200px) {
+        padding-top: 10px;
+    }
+    article {
+        background-color: #FFF;
+        padding: 65px 75px;
+        @media (max-width: 800px) {
+            padding: 55px 65px;
+        }
+        @media (max-width: 600px) {
+            padding: 40px 40px;
+        }
+        @media (max-width: 400px) {
+            padding: 30px 20px;
+        }
+    }
+    .offer__bg {
+        margin-top: 0 !important;
+        margin-bottom: 40px !important;
+    }
+}
